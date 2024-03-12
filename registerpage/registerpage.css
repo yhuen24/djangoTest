@@ -1,0 +1,80 @@
+body {
+  font-family: Inter;
+  margin: 0;
+}
+
+.nav-bar {
+    background-color: #2B263D;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .nav-bar a {
+    float: right;
+    color: #f2f2f2;
+    text-align: right;
+    padding: 25px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 15pt;
+    margin-right: 10pt;
+  }
+  
+  /* Change the color of links on hover */
+  .nav-bar a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 10pt;
+  }
+  
+  /* Add a color to the active/current link */
+  .nav-bar a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  .nav-bar img {
+    width:160pt;
+    height: 80pt;
+    margin-left: 10pt;
+  }
+
+  .register-container {
+    background-color: #FEFDFD;
+    height: 540pt;
+    width:400pt;
+    border-radius: 10pt;
+    margin-left: 150pt;
+    margin-top: 60pt;
+    position: relative;
+  }
+
+  .register-container img {
+    margin-left: 700pt;
+  }
+  
+  .register-container span{
+    color: white;
+    font-size: 32px; /* Adjust as needed */
+    position: absolute; /* Add this line */
+    top: -40pt; /* Adjust as needed */
+    transform: translateX(-50%); /* Center horizontally */
+  }
+
+  .register-container #register_title{
+    color: black;
+    font-size: 25px; /* Adjust as needed */
+    position: absolute; /* Add this line */
+    top: 20pt; /* Adjust as needed */
+    right: 15%;
+    transform: translateX(-50%); /* Center horizontally */
+  }
+
+
+  .register-container #login_link{
+    color: #5F43B2;
+    font-size: 15px; /* Adjust as needed */
+    position: absolute; /* Add this line */
+    bottom: 40pt; /* Adjust as needed */
+    transform: translateX(40pt); /* Center horizontally */
+  }
