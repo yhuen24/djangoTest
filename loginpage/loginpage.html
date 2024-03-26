@@ -1,27 +1,43 @@
+<!-- templates/registration/login.html -->
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="loginpage.css">
-    <link rel="stylesheet" href="normalized.css">
+    <link rel="stylesheet" href="{% static 'css/loginpage.css' %}">
+    <link rel="stylesheet" href="{% static 'css/normalized.css' %}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <title>Login</title>
-    
+
 </head>
 <body style="background-color: #393251;">
     <div class="nav-bar">
-        <a href="#register">Register</a>
-        <img src="images/logo.png">
+        <a href="https://google.com" id="#register">Register</a>
+        <img src="../../static/images/logo.png" alt="edustore logo">
     </div>
 
     <div class="login-container">
-        <img src="images/girl.png">
+        <img src="../../static/images/girl.png" alt="girl">
         <span><b>LOG IN</b></span>
         <h1 id="login_title">User Login</h1>
         <a href="https://google.com/" id="admin_login_link"><u>Are you an Admin? Click here</u></a>
         <a href="https://google.com/" id="register_link"><u>Don't have an account? Register now</u></a>
     </div>
 
+    <div class="login-form">
+        <form action="login" method="post">
+           {% csrf_token %}
+
+           <label>Email</label>
+           <input name="email-input" id="email-input" type="email" placeholder=""/>
+
+            <label>Password</label>
+           <input name="password-input" id="password-input" type="password" placeholder=""/>
+
+            <input type="button" value="Submit"/>
+        <closeform></closeform>
+        </form>
+    </div>
 </body>
 </html>
