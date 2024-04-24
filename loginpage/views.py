@@ -13,6 +13,8 @@ from django.contrib import messages
 from .models import *
 from .forms import CreateUserForm
 
+def main_view(request):
+    return render(request, 'registration/mainpage.html')
 
 def register_view(request):
     form = CreateUserForm()
@@ -40,3 +42,17 @@ def login_view(request):
 
     context = {}
     return render(request, 'registration/login.html', context)
+
+def admin_login_view(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            login(request, user)
+            return redirect('home')
+
+    context = {}
+    return render(request, 'registration/admin_login.html', context)
